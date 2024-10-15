@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  FRONTEND_WEBAPP_DEV: betroy-fe-uat
+  FRONTEND_WEBAPP_UAT: betroy-fe-uat
 
 jobs:
   build-uat:
@@ -57,5 +57,5 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: ${{ env.FRONTEND_WEBAPP }}
+          app-name: ${{ env.FRONTEND_WEBAPP_UAT }}
           package: .
